@@ -1,7 +1,7 @@
 describe('Clicking Calamity Tests:', () => {
     let underTest;
     beforeEach(() => {
-        underTest = new ClickCount();
+        underTest = new ClickCounter();
     })
     describe('countClick() records clicks and ClickCount can give the clickCount', () => {
         

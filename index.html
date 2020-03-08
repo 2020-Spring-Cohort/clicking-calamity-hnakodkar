@@ -4,22 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 4 Project</title>
-    <script type="text/javascript" src="clickCounter.js"></script>
+    
 </head>
 
 <body>
+    <header>
+        <a href=""
+    </header>
    
     <div class="container">
         <div class="anchor"></div>
    
     <section>
-    <button class="click-btn">Click Me</button>
-    </section>  
+    <img class="click-img" src="https://greatamericancookies.s3.amazonaws.com/app/uploads/2015/10/OriginalChocChipMM1.png" 
+    alt="Cookie" height="300" width="300">
+    <div class="click-counter" > Click Count:</div>
+    
+    <button class ="reset-btn">Reset</button>
+    </section>
+   
     <section>
-        <button class="click-companiion">Clicking Companion</button>
-        <button class="click-multiplier">Clicking Multiplier</button>
+        <button class="purchase-companion">Purchase Companion</button>
+        <h3 class="companion-count">Companion Count: 0</h3>
+        <h3>Companion Cost: <span class="companion-cost">100</span></h3>
+        <h3 class="autoclicker"></h3>
+    </section>
+    <section>
+        <button class="click-multiplier">Purchse Multiplier</button>
+        <h3>Multiplier Count: <span class="multiplier-count">0</span></h3>
+        <h3>Multiplier Cost: <span class="multiplier-cost">10</span></h3>
     </section>
 </div>
+    <script src="./src/js/ClickCounter.js"></script>
     <script src="./src/js/app.js"></script>
 </body>
 </html>
