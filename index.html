@@ -1,41 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 4 Project</title>
-    
+    <link rel="stylesheet" href="src/css/style.css">
+
 </head>
 
 <body>
-    <header>
-        <a href=""
+    <header class="header">
+        <div class="modal" id="modal">
+            <div class="modal_content">
+                <a href="#" class="modal_ex">×</a>
+                <p>Our comapny is very passionate about creating awesome games. We like to make people happy through games 
+                    when ever they prefer.</p>
+                </div>
+                </div>
+                <div class="modal-2" id="modal-2">
+                    <div class="modal_content_2">
+                        <a href="#" class="modal_ex">×</a>
+                        <p>My name is Hetal Nakodkar. I love to code so, I developed this game using HTML, CSS, and Javascript. If you like 
+                            to know more about me please check out the links below.</p>
+                        <a href="https://hnakodkar.github.io/">My Portfolio</a><br>
+                        <a href="https://github.com/2020-Spring-Cohort">My Git Hub</a>
+                        </div>
+                        </div>
+        <nav class="nav-bar">
+            <a href="#modal" class="modal_open">Company Info</a>
+            <a href="https://orteil.dashnet.org/cookieclicker/ " target="__blank">Our Inspiration</a>
+            <a href="#modal-2" class="modal_open_2">Contact Me</a>
+        </nav>
+            <h1> Welcome To Cookie Clicker Game</h1>
     </header>
-   
+
     <div class="container">
-        <div class="anchor"></div>
-   
-    <section>
-    <img class="click-img" src="https://greatamericancookies.s3.amazonaws.com/app/uploads/2015/10/OriginalChocChipMM1.png" 
-    alt="Cookie" height="300" width="300">
-    <div class="click-counter" > Click Count:</div>
-    
-    <button class ="reset-btn">Reset</button>
-    </section>
-   
-    <section>
-        <button class="purchase-companion">Purchase Companion</button>
-        <h3 class="companion-count">Companion Count: 0</h3>
-        <h3>Companion Cost: <span class="companion-cost">100</span></h3>
-        <h3 class="autoclicker"></h3>
-    </section>
-    <section>
-        <button class="click-multiplier">Purchse Multiplier</button>
-        <h3>Multiplier Count: <span class="multiplier-count">0</span></h3>
-        <h3>Multiplier Cost: <span class="multiplier-cost">10</span></h3>
-    </section>
-</div>
+        <div class="anchor">
+
+        <section class="cookie">
+            <img class="click-img"
+                src="https://greatamericancookies.s3.amazonaws.com/app/uploads/2015/10/OriginalChocChipMM1.png"
+                alt="Cookie" height="300" width="300">
+            <div class="click-counter"> Click Count:</div>
+
+            <button class="reset-btn">Reset Game</button>
+        </section>
+
+        <section class="companion">
+            <button class="purchase-companion">Purchase Companion</button>
+            <audio id="snare" src="https://s3.amazonaws.com/nrf-codepen-assets/snare-2.mp3" preload="auto"></audio>
+            <h3 class="companion-count">Companion Count: 0</h3>
+            <h3>Companion Cost: <span class="companion-cost">100</span></h3>
+            <h3 class="autoclicker"></h3>
+        </section>
+        <section class="multiplier">
+            <button class="click-multiplier">Purchase Multiplier</button>
+            <h3>Multiplier Count: <span class="multiplier-count">0</span></h3>
+            <h3>Multiplier Cost: <span class="multiplier-cost">10</span></h3>
+        </section>
+    </div>
+    </div>
     <script src="./src/js/ClickCounter.js"></script>
     <script src="./src/js/app.js"></script>
 </body>
+
 </html>

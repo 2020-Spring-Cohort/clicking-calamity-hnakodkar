@@ -55,10 +55,46 @@ describe('Clicking Calamity Tests:', () => {
                 expect(underTest.clickCount).toBe(0);
                 expect(underTest.companionCost).toBe(121);
            
-         })
-
-
+         });
+         describe('purchasing Multipliers:', () => {
+            it("ClickCount should have 1 multiplier count after 10 clicks.",() =>{
+                for(let i = 0; i<10; i++) {
+                    underTest.countClick()
+                }
+                underTest.purchaseMultiplier()
+                expect(underTest.multiplierCount).toBe(1);
+            });
+            it("ClickCount should be able to purchase more multipliers.",() =>{
+                for (let i = 0; i<25; i++){
+                    underTest.countClick()
+                }
+                underTest.purchaseMultiplier()
+                underTest.purchaseMultiplier()
+                expect(underTest.multiplierCount).toBe(2);
+             });
+             it("the cost of purchase multiplier goes up by 10%.",() =>{
+                for (let i = 0; i<10; i++){
+                    underTest.countClick()
+                }
+                underTest.purchaseMultiplier()
+                expect(underTest.multiplierCost).toBe(10 * 1.1);
+            
+             });
+             it("the clickCount should multiply after purchasing multiplier.",() =>{
+                for (let i = 0; i<10; i++){
+                    underTest.countClick()
+                }
+                underTest.purchaseMultiplier()
+                //action
+                for(let i =0; i<10; i++){
+                    underTest.countClick();
+                }
+                //assertion
+                expect(underTest.getClickCount()).toBe(12);
+            
+             });
 });
    
 
+});
 });
